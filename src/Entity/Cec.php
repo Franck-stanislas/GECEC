@@ -34,6 +34,9 @@ class Cec
     #[ORM\Column(type: 'string', length: 255)]
     private $cec_rattachement;
 
+    #[ORM\OneToOne(mappedBy: 'code', targetEntity: User::class, cascade: ['persist', 'remove'])]
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +122,23 @@ class Cec
     public function setCecRattachement(string $cec_rattachement): self
     {
         $this->cec_rattachement = $cec_rattachement;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user): self
+    {
+        // set the owning side of the relation if necessary
+        if ($user->getCode() !== $this) {
+            $user->setCode($this);
+        }
+
+        $this->user = $user;
 
         return $this;
     }

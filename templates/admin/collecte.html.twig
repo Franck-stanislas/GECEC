@@ -1,0 +1,197 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Collecte{% endblock %}
+
+{% block body %}
+    {{include('layouts/sidebar.html.twig')}}
+    <div class="mt-5 home-content">
+        <div class="page-content">
+            <div class="wizard-v4-content">
+                <div class="wizard-form">
+                    <div class="wizard-header">
+                        <h3 class="heading">Collecte des informations des CTD</h3>
+                        <p>Remplir tous les champs vides avant de passer au suivant</p>
+                    </div>
+                    <form class="form-register" action="#" method="post">
+                        <div id="form-total">
+                            <!-- SECTION 1 -->
+                            <h2>
+                                <span class="step-icon"><i class="zmdi">1</i></span>
+                                <span class="step-text">étape</span>
+                            </h2>
+                            <section>
+                                <div class="inner">
+                                    <h3>Informations Generales sur le Centre d'etat civil</h3>
+                                    <div class="form-row">
+                                        <div id="radio">
+                                            <input type="radio" name="gender" value="principal" checked class="radio-1"> Principal
+                                            <input type="radio" name="gender" value="secondaire">Secondaire
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <select name="region" id="region">
+                                                <option value="" disabled selected>Selectionner la Region</option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                        <div class="form-holder form-holder-2">
+                                            <select name="Departement" id="departement">
+                                                <option value="etat" disabled selected>Selectionner le Departement</option>
+                                                <option value=""></option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <select name="year" id="year">
+                                                <option value="etat" disabled selected>Etat du Centre</option>
+                                                <option value="Fonctionnel">Fonctionnel</option>
+                                                <option value="Non Fonctionnel">Non Fonctionnel</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-holder form-holder-2">
+                                            <select name="year" id="year">
+                                                <option value="etat" disabled selected>Etat du Centre</option>
+                                                <option value="Fonctionnel">Fonctionnel</option>
+                                                <option value="Non Fonctionnel">Non Fonctionnel</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- SECTION 2 -->
+                            <h2>
+                                <span class="step-icon"><i class="zmdi">2</i></span>
+                                <span class="step-text">étape</span>
+                            </h2>
+                            <section>
+                                <div class="inner">
+                                    <h3>SITUATION DES REGISTRES</h3>
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="password_1" id="password_1" class="form-control" required>
+                                                <span class="label">Nombre Registre Naissance</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="comfirm_password_1" id="comfirm_password_1" class="form-control" required>
+                                                <span class="label">Nombre Registre Mariage</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="password_1" id="password_1" class="form-control" required>
+                                                <span class="label">Nombre de Registre Deces</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="comfirm_password_1" id="comfirm_password_1" class="form-control" disabled required>
+                                                <span class="label">Nombre de Registre Total</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="password_1" id="password_1" class="form-control" required>
+                                                <span class="label">Nombre Registre Paraphé</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="comfirm_password_1" id="comfirm_password_1" class="form-control" required>
+                                                <span class="label">Nombre Registre Cloturé</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- SECTION 3 -->
+                            <h2>
+                                <span class="step-icon"><i class="zmdi">3</i></span>
+                                <span class="step-text">étape</span>
+                            </h2>
+                            <section>
+                                <div class="inner">
+                                    <h3>STATISTIQUES DES ACTES D’ETAT CIVIL ETABLIS</h3>
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" class="form-control" id="first-name-1" name="first-name-1" required>
+                                                <span class="label">Nombre Acte Naissance</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" class="form-control" id="last-name-1" name="last-name-1" required>
+                                                <span class="label">Nombre Acte Mariage</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-holder">
+                                            <label class="form-row-inner">
+                                                <input type="text" class="form-control" id="first-name-1" name="first-name-1" required>
+                                                <span class="label">Nombre Acte Deces</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-holder form-holder-2">
+                                            <select name="year" id="year">
+                                                <option value="etat" disabled selected>Etat du Centre</option>
+                                                <option value="Fonctionnel">Fonctionnel</option>
+                                                <option value="Non Fonctionnel">Non Fonctionnel</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- SECTION 4 -->
+                            <h2>
+                                <span class="step-icon"><i class="zmdi">4</i></span>
+                                <span class="step-text">étape</span>
+                            </h2>
+                            <section>
+                                <div class="inner">
+                                    <h3>OBSERVATIONS EVENTUELLES</h3>
+
+                                    <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <label class="form-row-inner">
+                                                <input type="text" name="balance" id="balance" class="form-control" required>
+                                                <span class="label">Observations</span>
+                                                <span class="border"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

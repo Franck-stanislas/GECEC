@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    {{include('layouts/sidebar.html.twig')}}
+
+    <div class="home-content">
+        <div class="content-nouveau">
+            <div class="container-nouveau">
+                <h3 class="title-new-cec">Ajouter un centre d'etat civil</h3>
+                <label class="header-description">Veillez Remplir tous les champs avant d'enregistrer</label>
+
+                {{ include('user/_form.html.twig') }}
+                <a href="{{ path('app_user_index') }}">back to list</a>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

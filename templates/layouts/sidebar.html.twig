@@ -1,0 +1,102 @@
+<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <div class="logo_name">GECEC MINDDEVEL</div>
+        </div>
+        <i class='bx bx-menu' id="btn"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <i class='bx bx-search'></i>
+            <input type="text" placeholder="Search...">
+        </li>
+        <li>
+            <a href="{{path('app_admin')}}">
+                <i class='bx bxs-grid-alt'></i>
+                <span class="links_name">Tableau de Bord</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a href="{{ path('app_collecte') }}">
+                <i class='bx bxs-analyse'></i>
+                <span class="links_name">Collecte</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Collecte</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-news'></i>
+                <span class="links_name">Nouveau Centre</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Nouveau Centre</span>
+        </li>
+        <li>
+            <a href="{{path('app_user_new')}}">
+                <i class='bx bx-news'></i>
+                <span class="links_name">Nouveau Officier</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Nouveau officier</span>
+        </li>
+        <li>
+            <a href="{{ path('app_carte') }}">
+                <i class='bx bx-map'></i>
+                <span class="links_name">Carte CTD</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Carte CTD</span>
+        </li>
+        <li>
+            <a href="historique.html">
+                <i class='bx bx-box'></i>
+                <span class="links_name">Historiques</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Historiques</span>
+        </li>
+        <li>
+            <a href="utilisateur.html">
+                <i class='bx bxs-user'></i>
+                <span class="links_name">Utilisateurs</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Utilisateurs</span>
+        </li>
+        <li>
+            <a href="parametres.html">
+                <i class='bx bxs-cog'></i>
+                <span class="links_name">Parametres</span>
+            </a>
+            <!-- Tooltip -->
+
+            <span class="tooltip">Parametres</span>
+        </li>
+    </ul>
+
+    <div class="profile-content">
+        <div class="profile">
+            <div class="profile-details">
+                <img src="{{ asset('img/cmr.png') }}" alt="">
+                <div class="name-job">
+                    <div class="name">GECEC</div>
+                    <div class="job">MINDDEVEL</div>
+                </div>
+            </div>
+            <a href="{{ path('app_logout') }}">
+                <i class='bx bx-log-out' id="log-out"></i>
+                <span class="links_name">Deconnexion</span>
+            </a>
+        </div>
+    </div>
+</div>
